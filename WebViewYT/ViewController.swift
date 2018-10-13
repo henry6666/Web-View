@@ -26,7 +26,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func submitSearchQueryACTION(_ sender: UIButton) {
+        let input = searchYoutubeOUTLET.text!
         
+        searchYoutube(query: input)
+    }
+    
+    func searchYoutube(query: String) {
+        let searchQuery = query.replacingOccurrences(of: " ", with: "+")
+        let url = URL.init(string: "https://www.youtube.com/results?search_query=\(searchQuery)")
+        let urlRequest = URLRequest(url: url!)
+        
+        webViewOUTLET.load(urlRequest)
     }
     
     @IBAction func saveViedeoACTION(_ sender: UIButton) {
