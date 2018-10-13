@@ -7,19 +7,32 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
-
+    
+    
+    
+    @IBOutlet weak var searchYoutubeOUTLET: UITextField!
+    @IBOutlet weak var goYoutubeOUTLET: UIButton!
+    @IBOutlet weak var webViewOUTLET: WKWebView!
+    @IBOutlet weak var playlistOUTLET: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        goYoutubeOUTLET.layer.cornerRadius = 15
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func submitSearchQueryACTION(_ sender: UIButton) {
+        
     }
-
-
+    
+    @IBAction func saveViedeoACTION(_ sender: UIButton) {
+        
+    }
+    
+    
 }
 
